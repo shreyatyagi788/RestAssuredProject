@@ -29,6 +29,8 @@ public class cookies_demo {
 		
 		.when()
 			.get("https://www.google.com/");
+		
+		//get single cookie info.
 		String cookieVal=res.getCookie("AEC");
 		System.out.println("value of cookie is====>"+cookieVal);
 	}
@@ -38,6 +40,8 @@ public class cookies_demo {
 		
 		.when()
 			.get("https://www.google.com/");
+		
+		//get info of all the cookies generated.
 		Map<String,String> cookiesVal = res.getCookies();
 		
 		for(String k: cookiesVal.keySet()) {

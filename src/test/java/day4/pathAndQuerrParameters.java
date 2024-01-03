@@ -19,7 +19,9 @@ public class pathAndQuerrParameters {
 			.pathParam("mypath2", "users")
 		.when()
 			//query parameters we don't need to specify in get method, they automatically sent with the req.
-			.get("https://reqres.in/{mypath1}/{mypath2}")
+			//.get("https://reqres.in/{mypath1}/{mypath2}")
+			.get("https://reqres.in/"+"{mypath1}"+"/"+"{mypath2}")
+
 		
 		.then()
 			.statusCode(200)

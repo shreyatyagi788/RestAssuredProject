@@ -21,16 +21,20 @@ public class headers_demo {
 		.then()
 			.header("Content-Type", "text/html; charset=ISO-8859-1")
 			.and()
-			.header("Content-Encoding", "gzip");
+			.header("Content-Encoding", "gzip")
+			.log().all(); //it will log all the info like headers,cookies,response body,status code and etc.
+			//.log().headers(); //this will print all the headers, then no need to print each header separately.
 		
+		//here 'and()' method is optional. 
 	}
 	@Test(priority=2)
 	void getSingleHeader() {
+		
 		Response res = given()
 		.when()
 			.get("https://www.google.com/");
 		String headerVal=res.getHeader("Content-Type");
-		System.out.println("value of content-type header is:  "+headerVal);
+		System.out.println("The value of content-type header is:  "+headerVal);
 			
 //		.then()
 //			.header("Content-Type", "text/html; charset=ISO-8859-1")

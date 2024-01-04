@@ -65,6 +65,7 @@ public class parsingJsonResponse {
 			
 		}
 //		Assert.assertEquals(data, "xyz");
+		Assert.assertEquals(status, true);
 		}
 //		.then()
 //			.statusCode(200);

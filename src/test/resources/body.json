@@ -1,82 +1,30 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "array",
-  "items": [
-    {
-      "type": "object",
-      "properties": {
-        "bookname": {
-          "type": "string"
-        },
-        "price": {
-          "type": "integer"
-        },
-        "author": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "bookname",
-        "price",
-        "author"
-      ]
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Welcome10Element"
     },
-    {
-      "type": "object",
-      "properties": {
-        "bookname": {
-          "type": "string"
-        },
-        "price": {
-          "type": "integer"
-        },
-        "author": {
-          "type": "string"
+    "definitions": {
+        "Welcome10Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "bookname": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "integer"
+                },
+                "author": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "author",
+                "bookname",
+                "price"
+            ],
+            "title": "Welcome10Element"
         }
-      },
-      "required": [
-        "bookname",
-        "price",
-        "author"
-      ]
-    },
-    {
-      "type": "object",
-      "properties": {
-        "bookname": {
-          "type": "string"
-        },
-        "price": {
-          "type": "integer"
-        },
-        "author": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "bookname",
-        "price",
-        "author"
-      ]
-    },
-    {
-      "type": "object",
-      "properties": {
-        "bookname": {
-          "type": "string"
-        },
-        "price": {
-          "type": "integer"
-        },
-        "author": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "bookname",
-        "price",
-        "author"
-      ]
     }
-  ]
 }
